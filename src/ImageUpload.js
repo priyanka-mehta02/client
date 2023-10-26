@@ -17,7 +17,7 @@ function ImageUpload() {
         const formData = new FormData();
         formData.append('avatar', selectedFile);
 
-        fetch('http://localhost:3000/upload', {
+        fetch(`${process.env.REACT_APP_BE_URL}/upload`, {
             method: 'POST',
             body: formData,
         })
